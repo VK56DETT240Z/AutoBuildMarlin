@@ -737,7 +737,7 @@ function run_command(action) {
   else {
 
     panel = vw.createWebviewPanel(
-      'marlinConfig', 'Auto Build Marlin',
+      'marlinConfig', 'Auto Build',
       vscode.ViewColumn.One,
       {
         enableCommandUris: true,         // The view can accept commands?
