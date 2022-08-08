@@ -1,0 +1,133 @@
+/* editview.css */
+/* Styles for Auto Build Marlin Home - and eventually Configurator */
+
+body#abm-conf { --marlin-svg: url(marlin.svg); }
+
+* {
+  --abm-edit-header-height: 50px;
+  --abm-edit-footer-height: 40px;
+  --abm-edit-filter-color: #FFF;
+  --abm-edit-filter-bg: #0008;
+  }
+
+body.vscode-dark {
+  --abm-edit-background: #282C34;
+  --abm-edit-color-comment: #827461;
+  --abm-edit-legend-color: #FFF;
+  --abm-edit-legend-bg: #0008;
+  }
+
+body.vscode-light {
+  --abm-edit-background: #DEF;
+  --abm-edit-color-comment: #3C2200;
+  --abm-edit-legend-color: #000;
+  --abm-edit-legend-bg: #FFF8;
+  }
+
+body.vscode-high-contrast {
+  --abm-edit-background: #282C34;
+  --abm-edit-color-comment: #827461;
+  --abm-edit-legend-color: #FF0;
+  --abm-edit-legend-bg: #008;
+  }
+
+.clear { clear: both !important; }
+.hide { display: none !important; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--abm-edit-background);
+  }
+
+a { text-decoration: none; color: #478EFF; }
+a:hover, a:active { color: #579EFF; }
+
+h1 {
+  padding: 10px;
+  margin: 0 0 4px;
+  }
+
+/* A filter form that doesn't scroll with the page */
+#filter-form {
+  position: fixed;
+  width: 100%;
+  padding: 0.5em 0;
+  color: var(--abm-edit-filter-color);
+  background: var(--abm-edit-filter-bg);
+  z-index: 100;
+  text-align: center;
+  }
+#filter-form input[type = "checkbox"] {
+  margin-left: 2em;
+  }
+
+  /* Comments are unobtrusive but readable */
+div.comment {
+  margin: 0 0 0.5em 27em;
+  }
+div.comment.switch {
+  margin-left: 1.4em;
+  display: inline-block;
+  width: 40%;
+  }
+div.comment span {
+  white-space: pre;
+  font-size: smaller;
+  font-family: monospace;
+  color: var(--abm-edit-color-comment);
+  }
+
+/* The config form contains all options in a cascade. */
+#config-form {
+  padding-top: 2.5em; /* Pad the top so the contents won't be obscured by the filter form */
+}
+#config-form label {
+  width: 25em; /* Make enough room for the longest label */
+  display: inline-block;
+  }
+#config-form input[type="text"] {
+  /* Make the text input fill up the rest of the horizontal space */
+  width: 20em;
+  }
+
+#config-form input { display: inline-block; }
+#config-form label { padding: 4px; vertical-align: top; }
+
+input[type="checkbox"] {
+  position: relative;
+  top: 0.2em;
+  }
+
+/* .section-inner { display: none; } */
+.section-inner.active { display: block; }
+
+#config-form legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.25em;
+  color: var(--abm-edit-legend-color);
+  background-color: var(--abm-edit-legend-bg);
+  }
+
+#config-form .line.disabled {
+  opacity: 0.5;
+  }
+
+/* Prevent text selection on all the elements */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  }
+pre {
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  }

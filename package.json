@@ -50,6 +50,21 @@
   ],
   "main": "./extension",
   "contributes": {
+    "customEditors": [
+      {
+        "viewType": "abm.configEditor",
+        "displayName": "Config Editor",
+        "selector": [
+          {
+            "filenamePattern": "Configuration.h"
+          },
+          {
+            "filenamePattern": "Configuration_adv.h"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {

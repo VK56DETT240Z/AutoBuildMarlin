@@ -10,6 +10,7 @@
 
 const vscode = require('vscode'),
        proto = require('./proto'),
+      editor = require('./abm/editor'),
          abm = require('./abm/abm'),
           vc = vscode.commands;
 
@@ -24,6 +25,9 @@ exports.activate = (context) => {
   cs.push(vc.registerCommand('abm.config',    () => { abm.run_command('config');    }));
   cs.push(vc.registerCommand('abm.show',      () => { abm.run_command();            }));
   cs.push(vc.registerCommand('abm.sponsor',   () => { abm.sponsor();                }));
+
+  // Register a custom editor provider for Configuration files
+  cs.push(editor.ConfigEditorProvider.register(context));
 
   abm.init(context, vscode);          // Init the extension (only for Marlin 1.x/2.x folder)
   abm.validate();                     // Validate the workspace for ABM

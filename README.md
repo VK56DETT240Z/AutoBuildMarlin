@@ -31,3 +31,11 @@ When installing "Auto Build Marlin" you'll also be prompted to install the [Plat
 - The **Auto Build Marlin** panel displays information about your selected motherboard and basic machine parameters. Each board comes with one or more build environments that are used to generate the final Marlin binary. Choose the environment that best matches your MCU, bootloader, etc.
 
   ![Environments](https://github.com/MarlinFirmware/AutoBuildMarlin/raw/master/img/abm-envs.png)
+
+## Internals
+
+Auto Build Marlin is a VSCode extension that contributes commands, sidebar views, a web view, and a custom editor.
+- Sidebar with basic extension info
+- Sidebar with build options like PlatformIO
+- Auto Build Marlin view with build options and configuration tool (under construction)
+- Custom Editor to display the opened Configuration file as a form.
