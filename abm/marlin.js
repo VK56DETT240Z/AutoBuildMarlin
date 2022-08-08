@@ -266,8 +266,10 @@ function validate() {
   if (project_path == '') return { ok: false, error: 'Error: No folder is open.' };
   for (const k in files) {      // Iterate keys
     const err = fileCheck(k);
-    if (err)
+    if (err) {
+      console.log("validation error for", k)
       return { ok: false, error: `Error: ${files[k].name} ${err}.` };
+    }
   }
   return { ok: true };
 }
