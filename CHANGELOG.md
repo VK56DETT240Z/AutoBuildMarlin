@@ -2,6 +2,15 @@
 
 The following enhancements and changes have been made to ***Auto Build Marlin***.
 
+## 2.2.0
+
+- Custom editor for configuration files
+- Auto Reveal Build checkbox, setting
+- Code formatter for pins and general code
+- Add categories to settings keys
+- Command to Apply `config.ini` to configurations.
+- Command to Export `config.ini`, `schema.json`, `schema.yml`
+
 ## 2.1.42
 
 - Only init extension for a Marlin folder

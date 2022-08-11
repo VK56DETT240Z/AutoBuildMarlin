@@ -2,7 +2,8 @@
   "name": "auto-build",
   "displayName": "Auto Build Marlin",
   "description": "Provides an interface to quickly build and upload Marlin Firmware.",
-  "version": "2.1.42",
+  "version": "2.2.0-a4",
+  "preview": true,
   "publisher": "marlinfirmware",
   "icon": "icon.png",
   "sponsor": {
@@ -54,6 +55,21 @@
   ],
   "main": "./extension",
   "contributes": {
+    "customEditors": [
+      {
+        "viewType": "abm.configEditor",
+        "displayName": "Config Editor",
+        "selector": [
+          {
+            "filenamePattern": "**/Marlin/Configuration.h"
+          },
+          {
+            "filenamePattern": "**/Marlin/Configuration_adv.h"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {
@@ -285,6 +301,6 @@
     "id": "aeed6cc8-3e27-4932-8212-161d73cdee2d",
     "publisherId": "cc3dab9c-e91d-467b-9b8e-b3d262181451",
     "publisherDisplayName": "Marlin Firmware",
-    "isPreReleaseVersion": false
+    "isPreReleaseVersion": true
   }
 }
