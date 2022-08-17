@@ -106,9 +106,9 @@
           "visibility": "visible"
         },
         {
+          "type": "webview",
           "id": "abm.infoView",
-          "name": "Marlin Info",
-          "visibility": "collapsed"
+          "name": "Marlin Info"
         }
       ]
     },
